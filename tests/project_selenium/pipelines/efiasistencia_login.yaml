@@ -1,0 +1,30 @@
+efiasistencia_login:
+  - name: node_request_demo
+    selenium.start:
+      parameters:
+        url: https://efi2-stage.lambdamotive.com/
+        wait_until:
+          name: '//*[@id="main"]/div/div[2]/div/form/div[2]/button'
+          value: ""
+          type: xpath
+  - name: request_fill_input
+    selenium.fill_input:
+      parameters:
+        inputs:
+          - name: '//*[@id="main"]/div/div[2]/div/form/div[2]/div[1]/div/input'
+            value: jose.torres+asitur@lambdamotive.com
+            type: xpath
+          - name: '//*[@id="password"]/div/div/input'
+            value: RhkqjJB8Hb
+            type: xpath
+  - name: click
+    selenium.click:
+      parameters:
+        inputs:
+          name: '//*[@id="main"]/div/div[2]/div/form/div[2]/button'
+          value: ""
+          type: xpath
+  - name: "wait_node"
+    time.wait:
+      parameters:
+        seconds: "50"

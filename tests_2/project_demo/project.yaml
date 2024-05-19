@@ -1,0 +1,10 @@
+name: "project_demo"
+http:
+   port: 8888
+store:
+   demo_store:
+      var1: "https://www.lambdamotive.com"
+      var2: "dd"
+run:
+   ["request_pipeline_1","request_pipeline_2"]
+

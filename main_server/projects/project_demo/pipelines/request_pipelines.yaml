@@ -1,0 +1,23 @@
+request_pipeline_1:
+  - name: "node_request_demo"
+    requests.node:
+      parameters:
+        url: "$demo_store.var1"
+        method: "GET"
+        
+  - name: "selenium"
+    selenium.start_browser.node:
+      parameters:
+        url: "http://selenium.dev"
+
+request_pipeline_2:
+  - name: "node_request_demo"
+    requests.node:
+      parameters:
+        url: "$demo_store.var1"
+        method: "GET"
+        
+  - name: "selenium"
+    selenium.start_browser.node:
+      parameters:
+        url: "http://selenium.dev"

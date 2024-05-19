@@ -1,0 +1,13 @@
+request_pipeline_1:
+  - name: "node_request_demo"
+    requests.get:
+      parameters:
+        url: "$demo_store.var1"
+        method: "GET"
+
+request_pipeline_2:
+  - name: "node_request_demo"
+    requests.get:
+      parameters:
+        url: "$demo_store.var1"
+        method: "GET"

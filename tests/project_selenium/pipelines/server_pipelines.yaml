@@ -1,0 +1,7 @@
+server_pipeline:
+  - name: server_path
+    http.endpoint:
+      background: true
+      parameters:
+        path: /test
+        method: POST

@@ -1,0 +1,19 @@
+request_pipeline_1:
+  - name: "node_request_demo"
+    selenium.start:
+      parameters:
+        url: "$demo_store.var1"
+        method: "GET"
+
+request_pipeline_2:
+  - name: "request_fill_input"
+    selenium.fill_input:
+      parameters:
+        inputs:
+          - name: "input_name"
+            value: "input_value"
+            type: "text"
+          - name: "input_name2"
+            value: "input_value2"
+            type: "text"
+        

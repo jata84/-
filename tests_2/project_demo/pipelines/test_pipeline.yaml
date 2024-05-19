@@ -1,0 +1,33 @@
+request_pipeline_2:
+  - name: "node_request_demo2"
+    requests.get:
+      parameters:
+        url: "https://www.google.es"
+        method: "GET"
+
+  - name: "node_request_demo3"
+    requests.get:
+      parameters:
+        url: "https://www.google.es"
+        method: "GET"
+
+server_pipeline:
+  - name: server_create
+    http.create:
+      parameters:
+        endless: true
+
+  - name: server_path
+    http.endpoint:
+      parameters:
+        endpoint:
+          path: /test
+          method: POST
+          return:
+            header: ""
+            body: ""
+
+  - name: server_start
+    http.status:
+      parameters:
+        status: start

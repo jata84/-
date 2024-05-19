@@ -1,0 +1,10 @@
+name: "project_selenium"
+http:
+   port: 8899
+run:
+   runbook1:
+      - "server_pipeline"
+      - "efiasistencia_login"
+   runbook2:
+      - "server_pipeline"
+

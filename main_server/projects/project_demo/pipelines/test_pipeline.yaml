@@ -1,0 +1,17 @@
+request_pipeline_2:
+  - name: "node_request_demo2"
+    requests.node:
+      parameters:
+        url: "https://www.google.es"
+        method: "GET"
+
+  - name: "node_request_demo3"
+    requests.node:
+      parameters:
+        url: "https://www.google.es"
+        method: "GET"
+
+  - name: "wait_demo"
+    wait.node:
+      parameters:
+        seconds: "5"

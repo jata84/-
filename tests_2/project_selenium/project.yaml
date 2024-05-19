@@ -1,0 +1,8 @@
+name: "project_selenium"
+store:
+   demo_store:
+      var1: "https://www.lambdamotive.com"
+      var2: "dd"
+run:
+   ["selenium_pipeline_2"]
+

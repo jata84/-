@@ -1,0 +1,5 @@
+wait_pipeline:
+  - name: "wait_node"
+    time.wait:
+      parameters:
+        seconds: "10"
