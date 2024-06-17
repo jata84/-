@@ -39,7 +39,11 @@ func (p *ProjectYaml) Validate() (error, *Project) {
 
 	}
 	project := NewProject(p.Name, store, httpServer)
-	project.AddRunList(p.Run)
+
+	runbook := NewRunBook(project)
+
+	project.AddRunBook(runbook)
+	//project.AddRunList(p.Run)
 
 	return nil, project
 }

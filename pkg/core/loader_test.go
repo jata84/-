@@ -6,6 +6,6 @@ import (
 
 func TestNewLoaderFromFile(t *testing.T) {
 	loader := NewProjectLoader()
-	loader.LoadFromPath("../../tests/project_demo/")
+	loader.LoadFromPath("../../tests_2/project_demo/")
 
 }

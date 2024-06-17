@@ -7,6 +7,7 @@ type RunBook struct {
 
 func NewRunBook(project *Project) *RunBook {
 	return &RunBook{
+		project:       project,
 		run_book_list: make(map[string][]string),
 	}
 }
@@ -16,7 +17,10 @@ func (rb *RunBook) AddPipeLine(name string, pipeline_list []string) {
 }
 
 func (rb *RunBook) Run() {
-	for _,pipeline := range rb.run_book_list {
-		rb.project.pipelines.pipeline_list.Get(pipeline)
+	for _, pipeline := range rb.run_book_list {
+		for _, p := range pipeline {
+			rb.project.pipelines.pipeline_list.Get(p).Run()
+		}
+
 	}
 }

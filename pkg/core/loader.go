@@ -62,9 +62,11 @@ func (p *ProjectLoader) LoadFromPath(path string) (*Project, error) {
 		fmt.Printf("Contenido de project.yaml:\n%s\n", string(content))
 
 	}
-	for _, pipeline_run := range project.run {
-		project.run_pipeline.Add(project.pipelines.pipeline_list.Get(pipeline_run))
-	}
+	/*
+		for _, pipeline_run := range project.run {
+			project.run_pipeline.Add(project.pipelines.pipeline_list.Get(pipeline_run))
+		}
+	*/
 	return project, nil
 
 }

@@ -40,6 +40,10 @@ func (nmr *NodeModuleRequest) mandatory_parameters() *NodeParameterList {
 	})
 }
 
+func (nmr *NodeModuleRequest) IsBackground() bool {
+	return nmr.node.background
+}
+
 func (nmr *NodeModuleRequest) get_name() string {
 	return nmr.name
 }

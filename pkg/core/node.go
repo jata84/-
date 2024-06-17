@@ -124,8 +124,8 @@ func NewNode(name string, description string, parameters *NodeParameterList, nex
 	node.status = NewNodeStatus(nil, parameters, node, NodeStatusPendant)
 	if module != nil {
 		module.SetNode(node)
+		node.background = module.IsBackground()
 	}
-	node.background = module.IsBackground()
 
 	return node
 }

@@ -7,7 +7,7 @@ import (
 
 func TestNewProjectYamlWithYAMLFile(t *testing.T) {
 	// Abrir el archivo YAML
-	yamlString, err := os.ReadFile("../../tests/project_demo/project.yaml")
+	yamlString, err := os.ReadFile("../../tests_2/project_demo/project.yaml")
 	//yamlFile, err := os.Open("../../tests/project_demo/project.yaml")
 	if err != nil {
 		t.Fatalf("Error al abrir el archivo YAML: %v", err)
@@ -21,7 +21,7 @@ func TestNewProjectYamlWithYAMLFile(t *testing.T) {
 }
 
 func TestNewPipelineWithYAMLFile(t *testing.T) {
-	yamlString, err := os.ReadFile("../../tests/project_demo/pipelines/request_pipelines.yaml")
+	yamlString, err := os.ReadFile("../../tests_2/project_demo/pipelines/request_pipelines.yaml")
 	if err != nil {
 		t.Fatalf("Error al abrir el archivo YAML: %v", err)
 	}
@@ -36,7 +36,7 @@ func TestNewPipelineWithYAMLFile(t *testing.T) {
 
 func TestParserNodeWait(t *testing.T) {
 
-	yamlString, err := os.ReadFile("../../tests/project_demo/pipelines/wait_pipeline.yaml")
+	yamlString, err := os.ReadFile("../../tests_2/project_demo/pipelines/wait_pipeline.yaml")
 	if err != nil {
 		t.Fatalf("Error al abrir el archivo YAML: %v", err)
 	}
@@ -52,7 +52,7 @@ func TestParserNodeWait(t *testing.T) {
 
 func TestParserNodeSelenium(t *testing.T) {
 
-	yamlString, err := os.ReadFile("../../tests/project_demo/pipelines/selenium_pipelines.yaml")
+	yamlString, err := os.ReadFile("../../tests_2/project_demo/pipelines/selenium_pipelines.yaml")
 	if err != nil {
 		t.Fatalf("Error al abrir el archivo YAML: %v", err)
 	}
